@@ -38,6 +38,7 @@ picture {
 }
 
 img {
+  height: auto;
   max-width: 350px;
   box-shadow: 0 0 30px #333;
   border-radius: 3px;
