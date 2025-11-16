@@ -1,171 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Exemplos: CSS Position</title>
+    <meta charset="UTF-8" />
+    <title>Exemplo de Float e Clear</title>
+
     <style>
-      /* --- Reset simples --- */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
       body {
-        font-family: system-ui, Arial, sans-serif;
-        line-height: 1.4;
-        padding-top: 80px;
+        font-family: Arial, sans-serif;
+        padding: 20px;
       }
 
-      /* --- 1. Overlay de texto sobre imagem --- */
-      .card {
-        width: 90%;
-        max-width: 900px;
-        margin: 20px auto;
-        border-radius: 8px;
-        overflow: hidden; /* garante que o conteúdo não transborde */
-        position: relative; /* <-- cria o contexto para elementos absolute filhos */
-      }
-      .card img {
-        display: block;
-        width: 100%;
-        height: auto; /* preserva proporção */
-      }
-      .card .overlay {
-        position: absolute; /* posicionado relativo ao .card */
-        left: 20px;
-        bottom: 20px;
-        background: rgba(0, 0, 0, 0.55);
-        color: white;
-        padding: 12px 18px;
-        border-radius: 6px;
-      }
-
-      /* --- 2. Popup dentro de um container --- */
-      .container {
-        width: 90%;
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 18px;
-        border: 1px dashed #888;
-        position: relative; /* contexto para o popup */
-        height: 160px;
-      }
-      .popup {
-        position: absolute; /* removido do fluxo e posicionado em relação a .container */
-        top: 10px;
-        right: 10px;
-        width: 220px;
-        padding: 10px;
-        background: #fff;
-        border: 1px solid #ccc;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      }
-
-      /* --- 3. Header fixo --- */
-      .sticky-header {
-        position: fixed; /* fixo ao viewport (janela do navegador) */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px;
-        background: linear-gradient(90deg, #0b76ff, #0bffda);
+      .imagem {
+        float: left; /* A imagem flutua à esquerda */
+        width: 200px;
+        height: 150px;
+        background: #4ca3dd;
+        margin-right: 15px;
         color: white;
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 16px;
-        padding: 0 18px;
-        z-index: 9999; /* aparece acima do conteúdo */
       }
 
-      /* --- 4. Demonstração de relative deslocado --- */
-      .flow-demo {
-        width: 90%;
-        max-width: 900px;
-        margin: 20px auto 60px;
-        display: flex;
-        gap: 12px;
-      }
-      .box {
-        flex: 1;
-        padding: 18px;
-        border-radius: 6px;
-        background: #f4f4f4;
-        border: 1px solid #ddd;
-      }
-      .shifted {
-        position: relative; /* permanece no fluxo, espaço original preservado */
-        top: 14px;
-        left: 10px;
-        background: #fffbe0;
+      .texto-sem-clear {
+        background: #ffe7a1;
+        padding: 10px;
+        margin-top: 10px;
       }
 
-      /* estética */
-      h2 {
-        margin: 12px 0;
-        font-size: 1.1rem;
-      }
-      p {
-        margin: 8px 0;
+      .texto-com-clear {
+        background: #c1ffd1;
+        padding: 10px;
+        margin-top: 10px;
+        clear: both; /* Impede que o texto suba ao lado do float */
       }
     </style>
   </head>
   <body>
-    <header class="sticky-header">
-      <strong>Meu site (header fixo)</strong>
-      <nav style="margin-left: auto; opacity: 0.95">Menu • Sobre • Contato</nav>
-    </header>
+    <h2>Exemplo de Float e Clear</h2>
 
-    <main>
-      <!-- 1. Overlay -->
-      <section class="card" aria-label="Imagem com texto sobreposto">
-        <img
-          src="https://picsum.photos/1200/600?random=1"
-          alt="Paisagem de exemplo"
-        />
-        <div class="overlay">
-          <h2>New Here?</h2>
-          <p>Learn what we believe — text overlay with position:absolute</p>
-        </div>
-      </section>
+    <div class="imagem">Imagem Flutuada</div>
 
-      <!-- 2. Popup -->
-      <section class="container" aria-label="Container com popup absoluto">
-        <h2>Container com Popup</h2>
-        <p>
-          Este container tem um popup (position: absolute) posicionado no canto
-          superior direito.
-        </p>
-        <div class="popup" role="dialog" aria-label="Popup de informação">
-          <strong>Popup</strong>
-          <p>Exemplo de uma janela flutuante relativa ao container.</p>
-        </div>
-      </section>
+    <p class="texto-sem-clear">
+      Este texto NÃO usa <strong>clear</strong> e por isso sobe ao lado da
+      imagem, causando o comportamento inesperado do layout.
+    </p>
 
-      <!-- 3. Flow e relative -->
-      <section class="flow-demo" aria-label="Demonstração fluxo e relative">
-        <div class="box">Caixa 1 (normal)</div>
-        <div class="box shifted">
-          Caixa 2 (position: relative; top:14px; left:10px)
-        </div>
-        <div class="box">Caixa 3 (normal)</div>
-      </section>
-
-      <!-- 4. Exemplo de imagem responsiva -->
-      <section style="width: 90%; max-width: 900px; margin: 20px auto">
-        <h2>Imagem responsiva (width:100%; height:auto;)</h2>
-        <div style="width: 60%; border: 1px solid #ddd; padding: 10px">
-          <img
-            src="https://picsum.photos/800/600?random=2"
-            alt="Imagem responsiva exemplo"
-          />
-          <p>
-            Note: a imagem acima usa <code>width:100%; height:auto;</code> para
-            preservar proporção.
-          </p>
-        </div>
-      </section>
-    </main>
+    <p class="texto-com-clear">
+      Este texto usa <strong>clear: both;</strong> e por isso só aparece depois
+      da imagem flutuada, evitando problemas de layout.
+    </p>
   </body>
 </html>
