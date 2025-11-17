@@ -1,0 +1,100 @@
+:root {
+  --primary-color: black;
+  --second-color: #fbd63b;
+  --third-color: #ffffff;
+  --fourth-color: #0370e3;
+  --header-font: Arial, "Times New Roman";
+  --body-font: sans-serif, Helvetica;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: var(--third-color);
+  color: var(--fourth-color);
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--primary-color);
+}
+
+header,
+main,
+footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: var(--header-font);
+  color: var(--fourth-color);
+}
+
+nav,
+p,
+section,
+article {
+  margin: 16px;
+  padding: 8px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  box-shadow: 0 0 30px var(--fourth-color);
+  border-radius: 50px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+
+h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--second-color);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+article {
+  position: absolute;
+  background-color: var(--fourth-color);
+  color: var(--primary-color);
+  border-radius: 25px;
+}
+
+.hero article img {
+  max-width: 150px;
+  height: auto;
+  float: right;
+}
+
+div article {
+  position: absolute;
+  right: 5px;
+  left: 5px;
+  top: 100px;
+}
+
+footer .socialmedia a img {
+  max-width: 75px;
+  height: auto;
+  margin: 10px;
+}
