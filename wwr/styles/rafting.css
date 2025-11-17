@@ -1,8 +1,8 @@
 :root {
   --primary-color: black;
-  --second-color: #fbd63b;
+  --second-color: #ffcc00;
   --third-color: #ffffff;
-  --fourth-color: #0370e3;
+  --fourth-color: #0059b8;
   --header-font: Arial, "Times New Roman";
   --body-font: sans-serif, Helvetica;
 }
@@ -61,7 +61,7 @@ article {
   border-radius: 50px;
 }
 
-h1 {
+.hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
