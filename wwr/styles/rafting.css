@@ -2,7 +2,7 @@
   --primary-color: black;
   --second-color: #ffcc00;
   --third-color: #ffffff;
-  --fourth-color: #0059b8;
+  --fourth-color: #044c99;
   --header-font: Arial, "Times New Roman";
   --body-font: sans-serif, Helvetica;
 }
@@ -73,10 +73,10 @@ article {
   border-top-right-radius: 25px;
 }
 
-article {
+.hero article {
   position: absolute;
   background-color: var(--fourth-color);
-  color: var(--primary-color);
+  color: var(--second-color);
   border-radius: 25px;
 }
 
