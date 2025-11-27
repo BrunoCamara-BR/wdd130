@@ -41,7 +41,6 @@ header img {
 }
 
 .menu {
-  align-self: space-between;
   grid-column: 4/5;
 }
 
