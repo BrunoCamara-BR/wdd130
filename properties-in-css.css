@@ -40,4 +40,9 @@
   align-items: stretch;
   flex-wrap: wrap;
   flex: 1 1 100%;
+
+  /*falta grid properties*/
+
+  /*for <ul>*/
+  list-style: none;
 }
