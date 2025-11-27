@@ -1,7 +1,7 @@
 :root {
   --primary-color: #000000;
   --second-color: #ffffff;
-  ---third-color: #035fc2;
+  --third-color: #035fc2;
   --header-font: Arial, "Times New Roman";
   --body-font: sans-serif, Helvetica;
 }
@@ -22,7 +22,7 @@ footer {
 header {
   font-family: var(--header-font);
   background-color: var(--second-color);
-  color: var(---third-color);
+  color: var(--third-color);
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   margin-bottom: 1.5rem;
@@ -31,7 +31,7 @@ header {
   /* place-items: center; */
   justify-items: center;
   align-items: center;
-  /* box-shadow: 0 0 30px var(---third-color); */
+  /* box-shadow: 0 0 30px var(--third-color); */
 }
 
 header img {
@@ -54,7 +54,7 @@ header img {
 
 .menu ul li a {
   text-decoration: none;
-  color: var(---third-color);
+  color: var(--third-color);
   font-size: 1.4rem;
   padding: 2px;
 }
@@ -67,7 +67,7 @@ body {
 h1,
 h2 {
   font-family: var(--header-font);
-  color: var(---third-color);
+  color: var(--third-color);
 }
 
 .menu,
@@ -87,7 +87,7 @@ article {
 .history img {
   height: auto;
   width: 200px;
-  box-shadow: 0 0 15px var(---third-color);
+  box-shadow: 0 0 15px var(--third-color);
 }
 
 .history h2 {
@@ -147,7 +147,7 @@ article {
   text-align: center;
   opacity: 0.9;
   color: var(--second-color);
-  background-color: var(---third-color);
+  background-color: var(--third-color);
   /* border-top-left-radius: 25px;
   border-top-right-radius: 25px; */
 }
@@ -155,7 +155,7 @@ article {
 .hero article {
   opacity: 0.9;
   position: absolute;
-  background-color: var(---third-color);
+  background-color: var(--third-color);
   color: var(--second-color);
 }
 
@@ -164,7 +164,7 @@ article {
   height: auto;
   float: right;
   margin: 10px;
-  /* box-shadow: 0 0 15px var(---third-color); */
+  /* box-shadow: 0 0 15px var(--third-color); */
 }
 
 div article {
