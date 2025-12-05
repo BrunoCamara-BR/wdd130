@@ -286,3 +286,7 @@ button:hover {
   background-color: var(--primary-color);
   color: var(--second-color);
 }
+
+iframe {
+  border: none;
+}
