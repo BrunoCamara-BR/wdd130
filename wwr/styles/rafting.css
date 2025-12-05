@@ -7,6 +7,7 @@
 }
 
 * {
+  /* outline: 1px solid red; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -187,4 +188,101 @@ footer {
   grid-template-columns: 10fr 4fr 1fr;
   place-content: center;
   place-items: center;
+}
+
+.contactgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  place-content: center;
+}
+
+.info {
+  grid-column: 1/-1;
+  place-items: center;
+  place-content: center;
+}
+
+.info p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.googlemaps {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.user-form {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  margin-right: 50px;
+  background-color: var(--third-color);
+  padding: 1rem;
+  color: var(--second-color);
+}
+
+form label {
+  text-align: left;
+}
+
+#name,
+#email {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.purpose {
+  display: grid;
+  align-content: space-between;
+  font-size: 0.8rem;
+  gap: 10px;
+}
+
+.purpose label {
+  text-justify: left;
+}
+
+.message {
+  grid-column: 1/3;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+form textarea {
+  grid-column: 1/3;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: var(--body-font);
+}
+
+.subscribe {
+  grid-column: 1/3;
+  font-size: 0.9rem;
+}
+
+.subscribe input {
+  vertical-align: middle;
+}
+
+button {
+  grid-column: 1/3;
+  padding: 10px;
+  font-weight: 700;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--second-color);
 }
