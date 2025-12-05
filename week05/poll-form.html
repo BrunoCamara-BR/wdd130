@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/poll-forms.css" />
+  </head>
+  <body>
+    <header><h1>WDD 130 | HTML Form - User Poll</h1></header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Contact Information</legend>
+          <div class="form-item column2">
+            <label for="fullname">Full name:</label>
+            <input type="text" id="fullname" name="fullname" required />
+          </div>
+          <div class="form-item column2">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Questions</legend>
+          <div class="form-item column1">
+            <label for="browser"
+              >What is your favorite internet browser?
+            </label>
+            <select name="browser" id="browser">
+              <option value="chrome">chrome</option>
+              <option value="safari">safari</option>
+              <option value="firefox">firefox</option>
+            </select>
+          </div>
+          <div class="form-item column1">
+            <label for="pet">Do you have household pet?</label>
+            <input type="checkbox" id="pet" name="pet" />
+          </div>
+          <div class="form-item column1">
+            <label>List the places you have lived. </label>
+
+            <textarea
+              name="feedback"
+              id="feedback"
+              rows="4"
+              placeholder="New York, Sandiengo, Detroide"
+            ></textarea>
+          </div>
+        </fieldset>
+        <button type="submit">Submit Poll</button>
+      </form>
+    </main>
+    <footer>
+      <p>© 2025 | HTML Form - User Poll Activity | Bruno Câmara</p>
+    </footer>
+  </body>
+</html>

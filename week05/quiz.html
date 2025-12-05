@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/quiz.css" />
+  </head>
+  <body>
+    <header><h1>✅Basic HTML and CSS Quiz</h1></header>
+    <main>
+      <form>
+        <div class="column0">
+          <label for="q1"
+            ><span>1.</span>What selector for ID you have to use in CSS?</label
+          >
+
+          <select name="q1" id="q1">
+            <option value="" selected disabled>Choose One ...</option>
+            <option value=".">.</option>
+            <option value="#">#</option>
+            <option value=":">:</option>
+            <option value=">">></option>
+          </select>
+        </div>
+
+        <div class="column0">
+          <label for="q2"
+            ><span>2.</span>What is the difference between flexbox and
+            grid?</label
+          >
+          <textarea name="q2" id="q2" rows="4"></textarea>
+        </div>
+
+        <div class="column0">
+          <label for="q3"
+            ><span>3.</span>Write the color green in hexadecimal</label
+          >
+          <div>
+            <span>#</span>
+            <input type="text" maxlength="6" name="q3" id="q3" />
+          </div>
+        </div>
+
+        <div class="column1">
+          <p>
+            <span>4.</span>Which property defines space between two html
+            elements?
+          </p>
+          <div class="column2">
+            <label for="margin">margin</label>
+
+            <label for="padding">padding</label>
+
+            <label for="border">border</label>
+
+            <label for="color">color</label>
+          </div>
+          <div class="column3">
+            <input type="checkbox" id="margin" name="q4" value="margin" />
+            <input type="checkbox" id="padding" name="q4" value="padding" />
+            <input type="checkbox" id="border" name="q4" value="border" />
+            <input type="checkbox" id="color" name="q4" value="color" />
+          </div>
+        </div>
+
+        <div class="column0">
+          <label for="q5"
+            ><span>5.</span>What is the bottom margin given this
+            declaration?</label
+          >
+          <div class="example"><p>magin: 10px 5px 15px;</p></div>
+          <input type="number" id="q5" name="q5" />
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

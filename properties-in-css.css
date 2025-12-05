@@ -45,4 +45,21 @@
 
   /*for <ul>*/
   list-style: none;
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  text-align: center;
+
+  /* retirar as bordas*/
+  border: none;
+}
+
+footer {
+  margin: 1rem auto 0;
+  width: 650px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+  border-top: 1px solid #ccc;
 }
