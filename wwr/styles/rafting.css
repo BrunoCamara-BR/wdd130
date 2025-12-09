@@ -240,7 +240,7 @@ form label {
 }
 
 .purpose label {
-  text-justify: left;
+  text-align: left;
 }
 
 .message {
@@ -538,8 +538,6 @@ span {
   grid-row: 2/3;
   place-items: center;
   color: #464545;
-}
-.trips figure {
   text-align: center;
 }
 
